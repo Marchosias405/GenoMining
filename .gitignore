@@ -1,0 +1,15 @@
+# Keep reproducible source, notebooks, figures and small result tables in Git.
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+data/raw/*.zip
+data/raw/*.csv
+data/processed/*.csv
+artifacts/models/
+artifacts/predictions/
+artifacts/tables/cluster_assignments.csv
+artifacts/tables/outlier_assignments.csv
+artifacts/logs/
+.ipynb_checkpoints/

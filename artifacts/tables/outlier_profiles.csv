@@ -1,0 +1,7 @@
+flagged,time_in_hospital,num_lab_procedures,num_procedures,num_medications,number_outpatient,number_emergency,number_inpatient,number_diagnoses,algorithm
+False,4.0,44.0,1.0,15.0,0.0,0.0,0.0,8.0,IsolationForest
+True,3.5,38.0,1.0,16.0,2.0,2.0,2.0,9.0,IsolationForest
+False,4.0,44.0,1.0,15.0,0.0,0.0,0.0,8.0,LocalOutlierFactor
+True,5.0,33.0,0.0,11.0,0.0,0.0,0.0,7.0,LocalOutlierFactor
+False,4.0,44.0,1.0,15.0,0.0,0.0,0.0,8.0,EllipticEnvelope
+True,3.0,47.0,0.0,16.0,4.0,0.0,1.0,9.0,EllipticEnvelope

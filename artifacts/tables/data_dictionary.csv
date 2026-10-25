@@ -1,0 +1,51 @@
+column,role,type,description,missing_token,source
+encounter_id,identifier,categorical,"Unique encounter ID; audit/join only, never a model input.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+patient_nbr,identifier,categorical,"Patient grouping ID; used to prevent split overlap, never a model input.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+race,candidate input,categorical,Recorded race category; missing values remain missing.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+gender,candidate input,categorical,Recorded gender category; Unknown/Invalid retained as a category.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+age,candidate input,categorical,"Age in ten-year bands; categorical, not exact age.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+weight,candidate input,categorical,Weight band; subject to training-only high-missingness exclusion.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+admission_type_id,candidate input,categorical,Categorical admission type; see IDS_mapping.csv.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+discharge_disposition_id,candidate input,categorical,Categorical discharge destination; used for cohort exclusions.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+admission_source_id,candidate input,categorical,Categorical admission source; see IDS_mapping.csv.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+time_in_hospital,candidate input,integer,Length of the completed hospital stay in days.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+payer_code,candidate input,categorical,Payer category; missingness retained as an explicit category.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+medical_specialty,candidate input,categorical,Admitting physician specialty category.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+num_lab_procedures,candidate input,integer,Number of laboratory tests performed during this encounter.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+num_procedures,candidate input,integer,Number of non-laboratory procedures during this encounter.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+num_medications,candidate input,integer,Number of distinct generic medications during the encounter.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+number_outpatient,candidate input,integer,Outpatient encounters in the preceding year.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+number_emergency,candidate input,integer,Emergency encounters in the preceding year.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+number_inpatient,candidate input,integer,Inpatient encounters in the preceding year.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+diag_1,candidate input,categorical,Primary ICD-9 diagnosis; deterministically grouped for modeling.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+diag_2,candidate input,categorical,Secondary ICD-9 diagnosis; deterministically grouped for modeling.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+diag_3,candidate input,categorical,Additional ICD-9 diagnosis; deterministically grouped for modeling.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+number_diagnoses,candidate input,integer,Number of diagnoses entered into the encounter record.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+max_glu_serum,candidate input,categorical,"Glucose test category; None means not measured, NOT missing.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+A1Cresult,candidate input,categorical,"HbA1c category; None means not measured, NOT missing.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+metformin,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+repaglinide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+nateglinide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+chlorpropamide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+glimepiride,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+acetohexamide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+glipizide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+glyburide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+tolbutamide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+pioglitazone,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+rosiglitazone,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+acarbose,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+miglitol,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+troglitazone,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+tolazamide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+examide,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+citoglipton,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+insulin,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+glyburide-metformin,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+glipizide-metformin,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+glimepiride-pioglitazone,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+metformin-rosiglitazone,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+metformin-pioglitazone,candidate input,categorical,"Medication status: No, Steady, Up, or Down; No is a valid category.",?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+change,candidate input,categorical,Whether a diabetes medication changed during the encounter.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+diabetesMed,candidate input,categorical,Whether a diabetes medication was prescribed.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008
+readmitted,target,categorical,Recorded readmission: <30 positive; >30 and NO negative.,?,https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008

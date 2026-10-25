@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checks": {
+    "integrity_tests_passed": 12,
+    "all_five_phases_current": true,
+    "patient_overlap_zero": true,
+    "model_selected_by_development_cv": true,
+    "three_clusterers_and_three_outlier_detectors": true,
+    "all_saved_metrics_match_predictions": true,
+    "all_18_saved_models_reproduce_predictions": true,
+    "example_command_output_valid": true,
+    "executed_notebooks": 5,
+    "executed_code_cells": 46,
+    "figure_count": 12,
+    "patient_bootstrap_replicates": 200
+  },
+  "note": "Artifact checks supplement the pytest integrity tests; model scores are measured outcomes, not acceptance targets."
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Full-cohort, CPU-only reproducible experiment settings; decisions fixed before test evaluation.",
+  "seed": 459,
+  "cv_folds": 5,
+  "search_iterations": 4,
+  "selected_features": 20,
+  "threads": 2,
+  "cluster_counts": [3, 5, 8],
+  "silhouette_sample": 2000,
+  "outlier_sample": 12000,
+  "outlier_fraction": 0.03,
+  "bootstrap_repetitions": 200,
+  "threshold": 0.5
+}

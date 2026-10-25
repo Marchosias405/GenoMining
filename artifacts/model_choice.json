@@ -1,0 +1,7 @@
+{
+  "experiment": "xgboost__all",
+  "selection_metric": "development grouped-CV average precision",
+  "cv_ap": 0.23168285498209645,
+  "test_used_for_selection": false,
+  "rule": "Best of baseline and randomized candidates for each experiment; highest development CV AP selects final experiment."
+}

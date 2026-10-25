@@ -1,0 +1,13 @@
+{
+  "selected_experiment": "xgboost__all",
+  "selection_used_test": false,
+  "calibration_method": "sigmoid on independent calibration patients",
+  "base_models_refit_during_calibration": false,
+  "threshold": 0.5,
+  "test_encounters": 19927,
+  "test_patients": 14005,
+  "bootstrap": "200 patient-cluster bootstrap replicates; percentile intervals conditional on fixed fitted models; not training uncertainty.",
+  "subgroups": "Descriptive exploration only; groups below 100 encounters have metrics suppressed; not proof of fairness.",
+  "limitations": "Historical US data, incomplete capture of readmission, no released hospital IDs or encounter dates; internal validation only.",
+  "brier_note": "Brier score combines discrimination and calibration; use reliability diagrams alongside it."
+}

@@ -1,0 +1,20 @@
+Hospital Readmission Prediction
+
+This project compares machine-learning classifiers, feature selection, and probability calibration for recorded early hospital readmission among patients with diabetes.
+
+Example: run `python run.py predict --input examples/encounters.csv` to score three public historical encounters after training.
+
+Folder structure:
+  run.py          - Run individual phases or score a CSV.
+  config.json     - Fixed seeds and experiment settings.
+  readmission/    - Shared data, feature, analysis, model and evaluation code.
+  notebooks/      - Five phase notebooks with saved outputs.
+  data/raw/       - Original public UCI data and code mappings.
+  data/processed/ - Eligible cohort and patient-disjoint split assignments.
+  artifacts/      - Figures, tables, models, predictions and verification records.
+  examples/       - Three public input rows for the prediction demonstration.
+  docs/           - Experiment design and suggested team review responsibilities.
+  scripts/        - Notebook execution, verification and packaging helpers.
+  tests/          - Checks for leakage, target semantics and calibration behavior.
+
+See README.md for full setup, phase instructions and limitations. See FILE_GUIDE.md for each file's purpose and why it is needed. This overview preserves the requested filename while README.md provides standard GitHub rendering.

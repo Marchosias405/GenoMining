@@ -1,0 +1,29 @@
+{
+  "raw_encounters": 101766,
+  "raw_patients": 71518,
+  "candidate_features": 47,
+  "excluded_discharge_codes": [
+    11,
+    13,
+    14,
+    19,
+    20,
+    21
+  ],
+  "excluded_encounters": 2423,
+  "eligible_encounters": 99343,
+  "eligible_patients": 69990,
+  "positive_encounters": 11314,
+  "positive_rate": 0.11388824577474005,
+  "raw_label_counts": {
+    "NO": 54864,
+    ">30": 35545,
+    "<30": 11357
+  },
+  "patient_overlap": 0,
+  "source_url": "https://archive.ics.uci.edu/static/public/296/diabetes+130-us+hospitals+for+years+1999-2008.zip",
+  "source_doi": "10.24432/C5230J",
+  "archive_sha256": "f82ac129da2ddd2299391ff6fbae3a6a58b3edcf59ac9d7bd480c00fe453112a",
+  "csv_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+  "note": "11.4% refers to encounters, not unique patients. None test values are retained."
+}

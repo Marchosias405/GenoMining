@@ -1,0 +1,7 @@
+experiment,family,feature_set,baseline_cv_ap,selected_cv_ap,sampled_best_cv_ap,cv_ap_gain,selected_candidate,raw_inputs_retained,encoded_inputs,fit_seconds,search_seconds,best_params,warnings
+logistic_regression__all,logistic_regression,all,0.2175028264329734,0.2175028264329734,0.21712447374288546,0.0,baseline,42,216,5.034352500006207,223.2398220000032,{},
+logistic_regression__mi20,logistic_regression,mi20,0.21818382426329136,0.21818382426329136,0.2180224547254223,0.0,baseline,20,147,3.283494099989184,146.76086699998996,{},
+random_forest__all,random_forest,all,0.22567599106578817,0.22567599106578817,0.22492886238805862,0.0,baseline,42,216,13.912289600004442,367.98618140000326,{},
+random_forest__mi20,random_forest,mi20,0.22642759219060835,0.22642759219060835,0.22489086802923106,0.0,baseline,20,147,10.028791299992008,293.89777880000474,{},
+xgboost__all,xgboost,all,0.2257691670745517,0.23168285498209645,0.23168285498209645,0.005913687907544762,random_search,42,216,3.6338795999909053,148.87594480000553,"{""model__subsample"": 1.0, ""model__min_child_weight"": 1, ""model__max_depth"": 5, ""model__learning_rate"": 0.08}",
+xgboost__mi20,xgboost,mi20,0.2273210641217592,0.2314909841812693,0.2314909841812693,0.004169920059510085,random_search,20,147,2.787660300004063,116.10892220000096,"{""model__subsample"": 1.0, ""model__min_child_weight"": 1, ""model__max_depth"": 5, ""model__learning_rate"": 0.08}",

@@ -1,0 +1,38 @@
+{
+  "phase": "data",
+  "status": "complete",
+  "completed_at_utc": "2026-10-25T08:22:08.429827+00:00",
+  "seconds": 13.914666399999987,
+  "fingerprint": "c56ea4fdc7e5ffa94bd576ce2de652592ece9a5cf77f42786382204f64f1e8a7",
+  "configuration": {
+    "description": "Full-cohort, CPU-only reproducible experiment settings; decisions fixed before test evaluation.",
+    "seed": 459,
+    "cv_folds": 5,
+    "search_iterations": 4,
+    "selected_features": 20,
+    "threads": 2,
+    "cluster_counts": [
+      3,
+      5,
+      8
+    ],
+    "silhouette_sample": 2000,
+    "outlier_sample": 12000,
+    "outlier_fraction": 0.03,
+    "bootstrap_repetitions": 200,
+    "threshold": 0.5
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "xgboost": "3.0.5",
+      "matplotlib": "3.10.7",
+      "joblib": "1.5.2"
+    }
+  }
+}

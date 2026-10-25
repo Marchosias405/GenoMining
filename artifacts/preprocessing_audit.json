@@ -1,0 +1,16 @@
+{
+  "fit_partition": "development",
+  "dropped": [
+    "weight",
+    "acetohexamide",
+    "examide",
+    "citoglipton",
+    "metformin-rosiglitazone"
+  ],
+  "retained_input_count": 42,
+  "missing_policy": "Only ? is a missing token. None in A1Cresult/max_glu_serum remains test not performed.",
+  "age_policy": "Ten-year bands remain categorical.",
+  "diagnoses": "Fixed broad ICD-9 groups; no outcome-derived mapping.",
+  "outlier_policy": "Retain unusual valid encounters; no automatic row deletion.",
+  "note": "Each CV training fold learns its own exclusions, imputation, MI and encoding."
+}

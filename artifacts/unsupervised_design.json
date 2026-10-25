@@ -1,0 +1,24 @@
+{
+  "partition": "development only",
+  "inputs": [
+    "time_in_hospital",
+    "num_lab_procedures",
+    "num_procedures",
+    "num_medications",
+    "number_outpatient",
+    "number_emergency",
+    "number_inpatient",
+    "number_diagnoses"
+  ],
+  "scaling": "log1p -> median imputation -> standardization",
+  "cluster_selection": "Maximum sampled silhouette among k=3,5,8, independently for each algorithm; labels unused.",
+  "cluster_pca_explained_variance": [
+    0.24805676236537108,
+    0.17980513621979244
+  ],
+  "outlier_sample": 12000,
+  "outlier_fraction_target": 0.03,
+  "elliptic_input": "Five PCA components to avoid singular covariance; approximate elliptical distribution assumption.",
+  "outlier_decision": "Keep all eligible encounters. Flags are unusualness, not proven data error; no filtering of test/calibration.",
+  "limitations": "Numeric-only exploratory clusters omit categorical structure; PCA is a visualization, not clinical validation. LOF is transductive on this sample."
+}
