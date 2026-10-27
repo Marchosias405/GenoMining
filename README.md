@@ -2,9 +2,9 @@
 
 This branch explains and implements **Section 3 of the supplied requirements**. We examine historical diabetes hospital encounters, identify data-quality issues, and prepare inputs for a later hospital-readmission prediction study. For example, an analyst can inspect whether prior inpatient visits are associated with recorded early readmission, then transform the original mixed columns into a consistent numerical matrix.
 
-**Start with [notebook 1](notebooks/01_data_preparation.ipynb), then [notebook 2](notebooks/02_exploratory_analysis.ipynb).** Both contain the analysis code directly in their cells and retain their executed outputs. Notebook 1 downloads and validates the data, defines the target, and separates patients. Notebook 2 covers all Section 3 EDA and preprocessing requirements, with interpretations beside the results.
+**Start with [notebook 1](notebooks/01_data_preparation.ipynb), then [notebook 2](notebooks/02_exploratory_analysis.ipynb).** Both contain the analysis code directly in their cells and retain their executed outputs. Notebook 1 downloads and validates the data, defines the target, and separates patients. Notebook 2 contains the EDA and preprocessing code, with brief EDA observations beside the results.
 
-Notebook 2 saves four report figures, eight CSV tables, and [a short Section 3 report](notebooks/outputs/section3_report.md) under `notebooks/outputs/`. For later cross-validation, refit preprocessing inside each training fold.
+Notebook 2 saves four figures and five CSV tables under `notebooks/outputs/`, plus encoded development data in `data/processed/training.csv`. The training file includes `target` and two ID columns; exclude the IDs from model inputs. For later cross-validation, refit preprocessing inside each training fold.
 
 The earlier [focused notebook](section3/section3_eda_preprocessing.ipynb), [reference report](section3/reports/section3_reference_report.pdf), and Python workflow remain as separate reference material. The commands below headed "Earlier Section 3 workflow" refer to that implementation.
 
@@ -17,7 +17,7 @@ Branch: `codex/section-3-eda-preprocessing`. The inherited full-project implemen
 - Documented handling of missing values and outliers; numeric standardization and categorical encoding.
 - Independent mutual-information selection of 20 raw inputs, before one-hot encoding.
 - PCA on the full encoded representation, with a measured 95% variance target.
-- Two notebooks with direct analysis code, four essential figures, audit tables, and a short generated report. The earlier focused workflow also has a six-page reference report.
+- Two notebooks with direct analysis code, four essential figures, and five supporting tables. The earlier focused workflow also has a six-page reference report.
 
 See [requirements coverage](section3/REQUIREMENTS_COVERAGE.md) for a requirement-by-requirement evidence map. A complete checklist supports review; it cannot guarantee a particular grade.
 
