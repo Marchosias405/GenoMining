@@ -1,9 +1,0 @@
-{
-  "description": "Section 3 choices fixed before running the focused exploratory analysis.",
-  "selected_features": 20,
-  "isolation_trees": 200,
-  "outlier_flag_fraction": 0.03,
-  "pca_retained_variance": 0.95,
-  "strong_correlation_threshold": 0.80,
-  "figure_dpi": 180
-}

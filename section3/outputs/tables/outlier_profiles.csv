@@ -1,3 +1,0 @@
-flagged,encounters,time_in_hospital,num_lab_procedures,num_procedures,num_medications,number_outpatient,number_emergency,number_inpatient,number_diagnoses
-False,57879,4.0,44.0,1.0,15.0,0.0,0.0,0.0,8.0
-True,1791,3.0,35.0,1.0,15.0,1.0,2.0,2.0,8.0

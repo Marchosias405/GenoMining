@@ -1,4 +1,4 @@
-"""Preserve the authored notebooks 01/02; generate later phase notebooks and optionally execute them."""
+"""Create five readable phase notebooks and optionally execute them with retained outputs in an isolated kernel."""
 import argparse
 import asyncio
 import json
@@ -41,9 +41,16 @@ def figure(name):
 def specs():
     return [
         ('01_data_preparation','data','Data preparation and patient separation',
-         'Authored directly in notebook cells; preserve its content.', [], ''),
+         'Verify source integrity, eligibility, target definitions and patient-disjoint partitions before any modeling.',
+         ["display(JSON(read_json('artifacts/data_audit.json')))", table('split_summary.csv'), table('data_dictionary.csv'),
+          "from readmission.data import load_cohort\ncohort = load_cohort()\nassert cohort.groupby('patient_nbr')['split'].nunique().max() == 1\nassert cohort['target'].sum() == 11314\nprint('Verified patient-disjoint splits and cohort labels.')"],
+         'Explain why patient-level splitting matters, what the positive label actually captures, and why 11.4% refers to encounters.'),
         ('02_exploratory_analysis','eda','Exploratory analysis and preprocessing',
-         'Authored directly in notebook cells; preserve its content.', [], ''),
+         'Inspect development data only; verify missingness, skew, imbalance and associations before fitting classifiers.',
+         [table('missingness.csv','.head(15)'), table('numeric_summary.csv'),
+          "display(JSON(read_json('artifacts/preprocessing_audit.json')))",
+          figure('class_balance'),figure('missingness'),figure('numeric_distributions'),figure('numeric_by_outcome'),figure('correlations'),figure('categorical_outcomes')],
+         'Explain the distinction between missing tests and tests not performed, and discuss associations without claiming causation.'),
         ('03_clustering_outliers','unsupervised','Clustering and outlier comparisons',
          'Compare three clustering methods and three outlier detectors; inspect assumptions and keep valid unusual encounters.',
          [table('clustering_metrics.csv'),figure('clusters_pca'),table('cluster_profiles.csv'),
@@ -83,19 +90,6 @@ def build(execute=False, through=5):
             target.mkdir(parents=True,exist_ok=True)
             os.environ[variable] = str(target)
     for filename,phase,title,purpose,outputs,prompts in specs()[:through]:
-        target = notebook_dir/(filename+'.ipynb')
-        if filename in {'01_data_preparation', '02_exploratory_analysis'}:
-            if not target.exists():
-                raise FileNotFoundError(f'{target.name} is an authored notebook; restore it from Git.')
-            if execute:
-                print(f'Executing {target.name}', flush=True)
-                notebook = nbf.read(target, as_version=4)
-                NotebookClient(notebook, timeout=7200, kernel_name='readmission-project',
-                               resources={'metadata': {'path': str(ROOT)}}, allow_errors=False).execute()
-                nbf.write(notebook, target)
-            else:
-                print(f'Preserved {target.name}; edit its cells directly.', flush=True)
-            continue
         notebook = nbf.v4.new_notebook()
         notebook.metadata['kernelspec'] = {'name':'python3','display_name':'Python 3','language':'python'}
         notebook.metadata['language_info'] = {'name':'python','version':'3.12'}

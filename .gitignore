@@ -13,6 +13,3 @@ artifacts/tables/cluster_assignments.csv
 artifacts/tables/outlier_assignments.csv
 artifacts/logs/
 .ipynb_checkpoints/
-section3/outputs/data/
-section3/outputs/transformers/
-section3/submission/*.zip

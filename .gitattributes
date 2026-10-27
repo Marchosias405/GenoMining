@@ -1,7 +1,0 @@
-# Stable source bytes make provenance hashes portable across Git checkouts.
-* text=auto eol=lf
-*.pdf binary
-*.png binary
-*.joblib binary
-*.npz binary
-*.zip binary

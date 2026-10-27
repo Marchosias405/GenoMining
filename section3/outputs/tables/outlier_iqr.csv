@@ -1,9 +1,0 @@
-feature,q1,q3,iqr,lower_fence,upper_fence,zero_iqr,flagged_encounters,flagged_percent
-time_in_hospital,2.0,6.0,4.0,-4.0,12.0,False,1256,2.1049103402044578
-num_lab_procedures,31.0,57.0,26.0,-8.0,96.0,False,74,0.12401541813306519
-num_procedures,0.0,2.0,2.0,-3.0,5.0,False,2894,4.850008379420144
-num_medications,10.0,20.0,10.0,-5.0,35.0,False,1452,2.4333836098541983
-number_outpatient,0.0,0.0,0.0,0.0,0.0,True,9772,16.376738729679907
-number_emergency,0.0,0.0,0.0,0.0,0.0,True,6709,11.243505949388302
-number_inpatient,0.0,1.0,1.0,-1.5,2.5,False,4140,6.93815987933635
-number_diagnoses,6.0,9.0,3.0,1.5,13.5,False,159,0.26646556058320764

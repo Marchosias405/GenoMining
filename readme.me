@@ -1,19 +1,20 @@
-GenoMining Section 3: Data Preprocessing and Exploratory Analysis
+Hospital Readmission Prediction
 
-Start with README.md. It contains the introduction, an example, setup commands, file descriptions, data flow, findings and study guidance for this branch.
+This project compares machine-learning classifiers, feature selection, and probability calibration for recorded early hospital readmission among patients with diabetes.
 
-Quick start after installing requirements.txt:
-  python -m section3.run
-  python -m section3.build_notebook --execute
+Example: run `python run.py predict --input examples/encounters.csv` to score three public historical encounters after training.
 
-Folder map:
-  section3/          Focused analysis, executed notebook, study notes and submission helpers.
-  section3/outputs/  Four figures, evidence tables, matrices, transformers and audits.
-  section3/reports/  PDF and editable Markdown reference report.
-  readmission/       Shared data loading and preprocessing components.
-  data/              Public source data and patient-separated cohort, generated locally.
-  tests/             Focused integrity tests in test_section3.py.
+Folder structure:
+  run.py          - Run individual phases or score a CSV.
+  config.json     - Fixed seeds and experiment settings.
+  readmission/    - Shared data, feature, analysis, model and evaluation code.
+  notebooks/      - Five phase notebooks with saved outputs.
+  data/raw/       - Original public UCI data and code mappings.
+  data/processed/ - Eligible cohort and patient-disjoint split assignments.
+  artifacts/      - Figures, tables, models, predictions and verification records.
+  examples/       - Three public input rows for the prediction demonstration.
+  docs/           - Experiment design and suggested team review responsibilities.
+  scripts/        - Notebook execution, verification and packaging helpers.
+  tests/          - Checks for leakage, target semantics and calibration behavior.
 
-Example use: inspect prior inpatient-visit distributions and prepare a 147-column numerical matrix from 20 selected inputs. The README explains how to load that matrix and its matching row ledger.
-
-The final academic report is written and verified by the team. The supplied reference and study guide help explain the executed work.
+See README.md for full setup, phase instructions and limitations. See FILE_GUIDE.md for each file's purpose and why it is needed. This overview preserves the requested filename while README.md provides standard GitHub rendering.
