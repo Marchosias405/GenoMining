@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "analysis_and_output_hashes_current": true,
+  "zero_patient_overlap": true,
+  "matrix_and_pca_rows_aligned": true,
+  "finite_transformed_values": true,
+  "focused_tests_passed": 6,
+  "executed_notebooks": 1,
+  "executed_code_cells": 12,
+  "essential_figures": 4,
+  "reference_report_present": true,
+  "note": "PDF page layout is visually reviewed separately; these checks verify reproducible evidence, not grading outcomes."
+}

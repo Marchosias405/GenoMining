@@ -1,8 +1,8 @@
 {
   "phase": "data",
   "status": "complete",
-  "completed_at_utc": "2026-10-25T08:22:08.429827+00:00",
-  "seconds": 13.914666399999987,
+  "completed_at_utc": "2026-10-27T04:36:30.635383+00:00",
+  "seconds": 44.74009321400081,
   "fingerprint": "c56ea4fdc7e5ffa94bd576ce2de652592ece9a5cf77f42786382204f64f1e8a7",
   "configuration": {
     "description": "Full-cohort, CPU-only reproducible experiment settings; decisions fixed before test evaluation.",
@@ -23,8 +23,8 @@
     "threshold": 0.5
   },
   "environment": {
-    "python": "3.12.14",
-    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10",
+    "platform": "macOS-15.7.4-x86_64-i386-64bit",
     "packages": {
       "numpy": "2.2.6",
       "pandas": "2.3.3",

@@ -1,0 +1,101 @@
+{
+  "scope": "Section 3 only; development EDA and preprocessing; no classifier results",
+  "data": {
+    "raw_encounters": 101766,
+    "raw_patients": 71518,
+    "candidate_features": 47,
+    "excluded_discharge_codes": [
+      11,
+      13,
+      14,
+      19,
+      20,
+      21
+    ],
+    "excluded_encounters": 2423,
+    "eligible_encounters": 99343,
+    "eligible_patients": 69990,
+    "positive_encounters": 11314,
+    "positive_rate": 0.11388824577474005,
+    "raw_label_counts": {
+      "NO": 54864,
+      ">30": 35545,
+      "<30": 11357
+    },
+    "patient_overlap": 0,
+    "source_url": "https://archive.ics.uci.edu/static/public/296/diabetes+130-us+hospitals+for+years+1999-2008.zip",
+    "source_doi": "10.24432/C5230J",
+    "archive_sha256": "f82ac129da2ddd2299391ff6fbae3a6a58b3edcf59ac9d7bd480c00fe453112a",
+    "csv_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+    "note": "11.4% refers to encounters, not unique patients. None test values are retained."
+  },
+  "development_encounters": 59670,
+  "development_patients": 41960,
+  "development_positives": 6854,
+  "development_positive_rate": 0.11486509133567957,
+  "numeric_inputs": 8,
+  "categorical_candidate_inputs": 39,
+  "retained_raw_inputs": 42,
+  "selected_raw_inputs": 20,
+  "dropped_columns": [
+    "weight",
+    "acetohexamide",
+    "examide",
+    "citoglipton",
+    "metformin-rosiglitazone"
+  ],
+  "all_encoded": {
+    "rows": 59670,
+    "columns": 216,
+    "density": 0.19444444444444445,
+    "nonfinite_values": 0
+  },
+  "selected_encoded": {
+    "rows": 59670,
+    "columns": 147,
+    "density": 0.1360544217687075,
+    "nonfinite_values": 0
+  },
+  "pca_components": 65,
+  "pca_retained_variance": 0.9510940625291794,
+  "pca_first_two_variance": 0.19149362935238823,
+  "strongest_numeric_correlation": {
+    "feature_a": "time_in_hospital",
+    "feature_b": "num_medications",
+    "spearman_rho": 0.4628428382677205
+  },
+  "pairs_with_abs_rho_at_least_0_8": 0,
+  "iqr_any_flagged": 20162,
+  "isolation_flagged": 1791,
+  "outlier_rows_removed": 0,
+  "synthetic_rows_added": 0,
+  "numeric_missing_cells": 0,
+  "duplicate_encounter_ids": 0,
+  "settings": {
+    "description": "Section 3 choices fixed before running the focused exploratory analysis.",
+    "selected_features": 20,
+    "isolation_trees": 200,
+    "outlier_flag_fraction": 0.03,
+    "pca_retained_variance": 0.95,
+    "strong_correlation_threshold": 0.8,
+    "figure_dpi": 180
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "macOS-15.7.4-x86_64-i386-64bit",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scipy": "1.16.2",
+      "scikit-learn": "1.7.2",
+      "xgboost": "3.0.5",
+      "matplotlib": "3.10.7",
+      "joblib": "1.5.2"
+    }
+  },
+  "elapsed_seconds": 64.38819407399569,
+  "fit_scope": "Every learned transformation in this section fits development only. Refit inside each training fold for later CV.",
+  "pca_scope": "Centered numeric-standardized and binary-one-hot representation; labels are not inputs to PCA. Separate diagnostic alternative, not a change to the proposal classifier pipeline.",
+  "outlier_scope": "IQR screening plus one IsolationForest on the full development set. Flags identify unusual records, not confirmed errors. No labels enter the detector.",
+  "augmentation_scope": "None. Original class prevalence is retained. Oversampling before splitting would risk leakage; SMOTE is not required by this section."
+}

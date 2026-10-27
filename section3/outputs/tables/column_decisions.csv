@@ -1,0 +1,48 @@
+feature,retained,reason,raw_missing_percent,distinct_after_grouping_including_missing
+race,True,retained,2.252388134741076,6
+gender,True,retained,0.0,3
+age,True,retained,0.0,10
+weight,False,over 95% missing,96.80744092508799,10
+admission_type_id,True,retained,0.0,8
+discharge_disposition_id,True,retained,0.0,21
+admission_source_id,True,retained,0.0,16
+time_in_hospital,True,retained,0.0,14
+payer_code,True,retained,39.594436065024304,17
+medical_specialty,True,retained,48.96095190212837,68
+num_lab_procedures,True,retained,0.0,116
+num_procedures,True,retained,0.0,7
+num_medications,True,retained,0.0,74
+number_outpatient,True,retained,0.0,34
+number_emergency,True,retained,0.0,31
+number_inpatient,True,retained,0.0,19
+diag_1,True,retained,0.025138260432378077,10
+diag_2,True,retained,0.3552874141109435,10
+diag_3,True,retained,1.3926596279537458,10
+number_diagnoses,True,retained,0.0,16
+max_glu_serum,True,retained,0.0,4
+A1Cresult,True,retained,0.0,4
+metformin,True,retained,0.0,4
+repaglinide,True,retained,0.0,4
+nateglinide,True,retained,0.0,4
+chlorpropamide,True,retained,0.0,4
+glimepiride,True,retained,0.0,4
+acetohexamide,False,constant after diagnosis grouping,0.0,1
+glipizide,True,retained,0.0,4
+glyburide,True,retained,0.0,4
+tolbutamide,True,retained,0.0,2
+pioglitazone,True,retained,0.0,4
+rosiglitazone,True,retained,0.0,4
+acarbose,True,retained,0.0,4
+miglitol,True,retained,0.0,4
+troglitazone,True,retained,0.0,2
+tolazamide,True,retained,0.0,2
+examide,False,constant after diagnosis grouping,0.0,1
+citoglipton,False,constant after diagnosis grouping,0.0,1
+insulin,True,retained,0.0,4
+glyburide-metformin,True,retained,0.0,4
+glipizide-metformin,True,retained,0.0,2
+glimepiride-pioglitazone,True,retained,0.0,2
+metformin-rosiglitazone,False,constant after diagnosis grouping,0.0,1
+metformin-pioglitazone,True,retained,0.0,2
+change,True,retained,0.0,2
+diabetesMed,True,retained,0.0,2
