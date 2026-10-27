@@ -65,7 +65,7 @@ python run.py evaluation
 
 Commands reuse artifacts only when their required files and source/configuration fingerprints match. Add `--force` to recompute a requested phase, or run `python run.py all --force` for a complete reproduction. The modeling phase can take several minutes or longer on a CPU. It uses the full development cohort, five grouped folds, and four randomized configurations per classifier/feature setting, plus baselines. No GPU is needed. All settings are visible in `config.json`.
 
-To refresh all notebooks with retained outputs after a run, use `python scripts/build_notebooks.py --execute`. This regenerates the notebook files, so save any personal notebook edits elsewhere first. `python scripts/verify_delivery.py` checks the delivered evidence; `python scripts/inventory.py` refreshes the file guide.
+To refresh all notebooks with retained outputs after a run, use `python scripts/build_notebooks.py --execute`. Notebooks 01 and 02 are authored directly and their cells are preserved; the runner executes them without regenerating their content. Later notebooks are regenerated, so save personal edits to those elsewhere first. `python scripts/verify_delivery.py` checks the delivered evidence; `python scripts/inventory.py` refreshes the file guide.
 
 ### Example prediction
 

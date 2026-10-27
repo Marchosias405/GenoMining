@@ -2,7 +2,11 @@
 
 This branch explains and implements **Section 3 of the supplied requirements**. We examine historical diabetes hospital encounters, identify data-quality issues, and prepare inputs for a later hospital-readmission prediction study. For example, an analyst can inspect whether prior inpatient visits are associated with recorded early readmission, then transform the original mixed columns into a consistent numerical matrix.
 
-**Start with this README, then run [the focused notebook](section3/section3_eda_preprocessing.ipynb).** The notebook has saved outputs. Use the [reference report](section3/reports/section3_reference_report.pdf) to understand the methods and findings, and write your own final report after reviewing the evidence. The [editable report source](section3/reports/section3_reference_report.md) contains the same narrative and figure references.
+**Start with [notebook 1](notebooks/01_data_preparation.ipynb), then [notebook 2](notebooks/02_exploratory_analysis.ipynb).** Both contain the analysis code directly in their cells and retain their executed outputs. Notebook 1 downloads and validates the data, defines the target, and separates patients. Notebook 2 covers all Section 3 EDA and preprocessing requirements, with interpretations beside the results.
+
+Notebook 2 saves four report figures, eight CSV tables, and [a short Section 3 report](notebooks/outputs/section3_report.md) under `notebooks/outputs/`. For later cross-validation, refit preprocessing inside each training fold.
+
+The earlier [focused notebook](section3/section3_eda_preprocessing.ipynb), [reference report](section3/reports/section3_reference_report.pdf), and Python workflow remain as separate reference material. The commands below headed "Earlier Section 3 workflow" refer to that implementation.
 
 Branch: `codex/section-3-eda-preprocessing`. The inherited full-project implementation remains available; this section's commands and submission ZIP use only the data-preparation and EDA/preprocessing workflow. [The original project guide](docs/FULL_PROJECT_GUIDE.md) describes later modeling phases.
 
@@ -13,11 +17,23 @@ Branch: `codex/section-3-eda-preprocessing`. The inherited full-project implemen
 - Documented handling of missing values and outliers; numeric standardization and categorical encoding.
 - Independent mutual-information selection of 20 raw inputs, before one-hot encoding.
 - PCA on the full encoded representation, with a measured 95% variance target.
-- One executed teaching notebook, four essential figures, detailed evidence tables, reproducibility checks, and a six-page reference report.
+- Two notebooks with direct analysis code, four essential figures, audit tables, and a short generated report. The earlier focused workflow also has a six-page reference report.
 
 See [requirements coverage](section3/REQUIREMENTS_COVERAGE.md) for a requirement-by-requirement evidence map. A complete checklist supports review; it cannot guarantee a particular grade.
 
-## Run the section
+## Run notebooks 1 and 2
+
+Install `requirements.txt` in a Python 3.12 environment, then select that environment in Jupyter or VS Code. Open the complete project folder and run each notebook from top to bottom, starting with notebook 1. Notebook 1 downloads the public UCI data when necessary; notebook 2 then reads its saved patient-separated cohort.
+
+To execute both notebooks with the project's existing notebook runner:
+
+```bash
+python scripts/build_notebooks.py --execute --through 2
+```
+
+The runner preserves the cells in notebooks 1 and 2. Edit those notebooks directly; they are no longer regenerated from Python analysis code. Running the generator without `--execute` also preserves them.
+
+## Earlier Section 3 workflow
 
 Use Python 3.12. The delivered analysis used Python 3.12.14 and scikit-learn 1.7.2. From a terminal:
 
