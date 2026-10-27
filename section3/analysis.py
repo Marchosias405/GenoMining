@@ -205,9 +205,14 @@ def run():
 
     # PCA addresses the actual encoded dimensionality, rather than applying only to 8 numeric inputs.
     print('Fitting centered PCA on all development-encoded inputs...', flush=True)
-    dense = all_matrix.toarray()
+    dense = all_matrix.toarray().astype(np.float64)
     pca = PCA(n_components=settings['pca_retained_variance'], svd_solver='full')
     scores = pca.fit_transform(dense)
+
+    # Check that the fitted model reproduces its scores before saving
+    np.testing.assert_allclose(
+        pca.transform(dense), scores, atol=1e-7, rtol=1e-7
+    )
     explained = pd.DataFrame({'component': np.arange(1, len(pca.explained_variance_ratio_)+1),
                               'variance_ratio': pca.explained_variance_ratio_,
                               'cumulative_variance_ratio': np.cumsum(pca.explained_variance_ratio_)})

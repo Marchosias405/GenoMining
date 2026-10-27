@@ -57,8 +57,8 @@
     "nonfinite_values": 0
   },
   "pca_components": 65,
-  "pca_retained_variance": 0.9510941505432129,
-  "pca_first_two_variance": 0.19149363040924072,
+  "pca_retained_variance": 0.9510940625291794,
+  "pca_first_two_variance": 0.19149362935238823,
   "strongest_numeric_correlation": {
     "feature_a": "time_in_hospital",
     "feature_b": "num_medications",
@@ -81,8 +81,8 @@
     "figure_dpi": 180
   },
   "environment": {
-    "python": "3.12.14",
-    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10",
+    "platform": "macOS-15.7.4-x86_64-i386-64bit",
     "packages": {
       "numpy": "2.2.6",
       "pandas": "2.3.3",
@@ -93,7 +93,7 @@
       "joblib": "1.5.2"
     }
   },
-  "elapsed_seconds": 22.888626300002215,
+  "elapsed_seconds": 64.38819407399569,
   "fit_scope": "Every learned transformation in this section fits development only. Refit inside each training fold for later CV.",
   "pca_scope": "Centered numeric-standardized and binary-one-hot representation; labels are not inputs to PCA. Separate diagnostic alternative, not a change to the proposal classifier pipeline.",
   "outlier_scope": "IQR screening plus one IsolationForest on the full development set. Flags identify unusual records, not confirmed errors. No labels enter the detector.",
